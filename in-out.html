@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .linea1{
+            display: block;
+        }
+        div.img {
+            width: 150px;
+            height: 200px;
+            margin: 10px;
+            display: inline-block;
+            background-size: cover;
+            vertical-align: top;
+        }
+
+        div.img div {
+            background-color: gray;
+            border-radius: 5px;
+            margin-top: 150px;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        div.content {
+            width: 600px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="linea1">
+            <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+                <div class="hidden">
+                    <p>Colores: Negro</p>
+                    <p>Tallas: XL, L, M</p>
+                </div>
+            </div>
+            <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+                <div class="hidden">
+                    <p>Colores: Negro</p>
+                    <p>Tallas: XL, L, M</p>
+                </div>
+            </div>
+            <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+                <div class="hidden">
+                    <p>Colores: Negro</p>
+                    <p>Tallas: XL, L, M</p>
+                </div>
+            </div>
+            <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+                <div class="hidden">
+                    <p>Colores: Negro</p>
+                    <p>Tallas: XL, L, M</p>
+                </div>
+            </div>
+            <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+                <div class="hidden">
+                    <p>Colores: Negro</p>
+                    <p>Tallas: XL, L, M</p>
+                </div>
+            </div>
+        </div>
+    <div class="linea2">
+        <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+            <div class="hidden">
+                <p>Colores: Negro</p>
+                <p>Tallas: XL, L, M</p>
+            </div>
+        </div>
+        <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+            <div class="hidden">
+                <p>Colores: Negro</p>
+                <p>Tallas: XL, L, M</p>
+            </div>
+        </div>
+        <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+            <div class="hidden">
+                <p>Colores: Negro</p>
+                <p>Tallas: XL, L, M</p>
+            </div>
+        </div>
+        <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+            <div class="hidden">
+                <p>Colores: Negro</p>
+                <p>Tallas: XL, L, M</p>
+            </div>
+        </div>
+        <div class="img" id="foto1" data-dog="descarga.jfif" alt="" width="100" height="123" data-dog2="descarga2.jfif">
+            <div class="hidden">
+                <p>Colores: Negro</p>
+                <p>Tallas: XL, L, M</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+                    $('div.img').each(function(){
+                        var dog = $(this).data('dog');
+                        var dog2 = $(this).data('dog2');;
+                        $(this).css("background-image", "url("+dog+")");
+                        
+
+                        $(this).hover(
+                            function(){
+                                $(this).css("background-image", "url("+dog2+")");
+                                $(this).children(".hidden").slideDown("slow");
+                            },
+                            function(){
+                                $(this).css("background-image", "url("+dog+")");
+                                $(this).children(".hidden").slideUp("slow");
+                            },
+                            );
+                        //$(this).attr('src', $(this).data('gato-src'));
+                        //$(this).css('color', 'white')},
+                    //function(){$(this).css('color', 'black')}
+                });
+                
+        });
+    </script>
+</body>
+</html>
